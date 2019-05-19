@@ -41,7 +41,7 @@ Thanks! :heart:
 
 ## :scroll: License
 
-[MIT]license © [Aditya Tandon][website]
+[MIT] license © [Aditya Tandon][website]
 
 [badge_paypal_donate]: https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg
 [paypal_donations]: https://www.paypal.me/adityatandon007
