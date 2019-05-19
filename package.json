@@ -11,6 +11,7 @@
   "keywords": [],
   "author": "aditya tandon",
   "license": "MIT",
+  "homepage": "https://github.com/adityatandon007/friendlist-app",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
