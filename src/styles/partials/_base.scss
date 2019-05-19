@@ -1,0 +1,241 @@
+//
+// Base styles
+//
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+// Card 
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $card-bg;
+  background-clip: border-box;
+  border: $card-border-width solid $card-border-color;
+  @include border-radius($card-border-radius);
+  max-width: 25rem;
+  margin: 0 auto;
+
+  > hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  > .list-group:first-child {
+    .list-group-item:first-child {
+      @include border-top-radius($card-border-radius);
+    }
+  }
+
+  > .list-group:last-child {
+    .list-group-item:last-child {
+      @include border-bottom-radius($card-border-radius);
+    }
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: $card-spacer-x;
+  color: $card-color;
+}
+
+.card-title {
+  font-weight: bolder;
+}
+
+.card-subtitle {
+  margin-bottom: 0;
+}
+
+.card-info {
+  display: inline-block;
+  width: 75%;
+  max-width: 75%;
+}
+
+.card-actions {
+  display: inline-block;
+  width: 25%;
+  max-width: 25%;
+}
+
+.action-btn {
+  background-color: transparent;
+  border: 1px solid $gray-200;
+  padding: 4px 8px;
+  margin: 1px;
+  cursor: pointer;
+  outline: none;
+}
+
+.card-header {
+  padding: $card-spacer-y $card-spacer-x;
+  margin-bottom: 0;
+  color: $card-cap-color;
+  background-color: $card-cap-bg;
+  border-bottom: $card-border-width solid $card-border-color;
+  font-size: 18px;
+
+  &:first-child {
+    @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+  }
+
+  + .list-group {
+    .list-group-item:first-child {
+      border-top: 0;
+    }
+  }
+}
+
+
+// List
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+// Individual list items
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: $list-group-item-padding-y $list-group-item-padding-x;
+  color: $list-group-color;
+  background-color: $list-group-bg;
+  border: none;
+  border-bottom: $list-group-border-width solid $list-group-border-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $list-group-disabled-color;
+    pointer-events: none;
+    background-color: $list-group-disabled-bg;
+  }
+
+  &.active {
+    z-index: 2;
+    color: $list-group-active-color;
+    background-color: $list-group-active-bg;
+    border-color: $list-group-active-border-color;
+  }
+}
+
+// INPUTS
+
+.group {
+  position: relative;
+}
+
+input {
+  background: none;
+  color: $gray-900;;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $gray-900;;
+  &:focus {
+    outline: none;
+  }
+  &:focus ~ label,
+  &:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: $gray-700;
+  }
+  &:focus ~ .bar:before {
+    width: 100%;
+  }
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  &:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: $gray-700;
+    transition: 300ms ease all;
+    left: 0%;
+  }
+}
+
+// Pagination
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  @include list-unstyled();
+  @include border-radius();
+  margin-left: 8px;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: $pagination-padding-y $pagination-padding-x;
+  margin-left: -$pagination-border-width;
+  margin-bottom: 4px;
+  line-height: $pagination-line-height;
+  background-color: $pagination-bg;
+  border: $pagination-border-width solid $pagination-border-color;
+  text-decoration: none;
+
+  &:hover {
+    z-index: 2;
+    color: $gray-500;
+    text-decoration: none;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border-color;
+    cursor: pointer;
+  }
+
+  &:focus {
+    z-index: 2;
+    outline: $pagination-focus-outline;
+  }
+}
+
+.page-item {
+  &:first-child {
+    .page-link {
+      margin-left: 0;
+    }
+  }
+
+  &.active .page-link {
+    z-index: 1;
+    color: $pagination-active-color;
+    background-color: $pagination-active-bg;
+    border-color: $pagination-active-border-color;
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    pointer-events: none;
+    cursor: auto;
+    background-color: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border-color;
+  }
+}
