@@ -14,7 +14,8 @@
   "homepage": "https://github.com/adityatandon007/friendlist-app",
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-github-corner": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

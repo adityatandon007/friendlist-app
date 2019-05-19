@@ -2,6 +2,7 @@ import React from "react";
 import FriendListItem from "./friend-list-item/friend-list-item";
 import FriendInput from "./friend-input/friend-input";
 import  styles from './styles/main.scss';
+import GithubCorner from "react-github-corner";
 
 const friends = {
   friendList: [],
@@ -86,7 +87,13 @@ export default class App extends React.Component {
 
     return (
       <div className={styles["card"]}>
-
+        <GithubCorner
+          href="https://github.com/adityatandon007/friendlist-app"
+          bannerColor="#151513"
+          octoColor="#fff"
+          size={80}
+          direction="right"
+        />
         <div className={styles["card-header"] + ' ' + styles["bg-dark"] + ' ' + styles["text-white"]}>The FriendList</div>
         <FriendInput
           addFriend={this.addFriend}
