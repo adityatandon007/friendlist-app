@@ -9,7 +9,7 @@
 
 **Hey!** :blush: This is a simple friendlist app with pagination.
 
-[![friendlist-app](https://i.imgur.com/gvuvLpR.png)](https://adityatandon.github.io/friendlist-app)
+[![friendlist-app](https://i.imgur.com/gvuvLpR.png)](https://adityatandon007.github.io/friendlist-app)
 
 ## :cloud: Installation
 
